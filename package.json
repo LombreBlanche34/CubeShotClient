@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "electron": "^9.4.4",
+    "electron-localshortcut": "^3.2.1",
+    "electron-store": "^8.0.0",
+    "path": "^0.12.7"
+  },
+  "name": "cubeshotclient",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron main.js",
+    "start": "electron main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron-packager": "^16.0.0"
+  }
+}

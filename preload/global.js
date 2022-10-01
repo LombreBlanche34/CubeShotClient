@@ -1,0 +1,15 @@
+console.log("[PRELOAD] SUCCESSFUL START");
+
+const custom_timer = require("../script/UITimer");
+const crosshair = require("../script/Crosshair");
+const fixCss = require("../script/fixCss");
+const settings = require("../settings/settings");
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("[PRELOAD] SUCCESSFUL LOAD DOM");
+    settings();
+    custom_timer();
+    crosshair();
+    fixCss();
+    console.log("[PRELOAD] SUCCESSFUL LOAD ALL SCRIPTS");
+});
