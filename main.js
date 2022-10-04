@@ -8,15 +8,24 @@ const {
 const Store = require("electron-store");
 const config = new Store();
 const path = require("path");
+const client = require('discord-rich-presence')('1024249505429868594');
+client.updatePresence({
+    state: 'CubeshotClient',
+    startTimestamp: Date.now(),
+    largeImageKey: 'favicon',
+    instance: true,
+});
 
-const cmdline = require("./init/cmdline");
-const shortcuts = require("./init/shortcuts");
 // swapper from krunker FrenchChadsClient (ty azerptiop)
 const Swapper = require("./script/swapper");
+const cmdline = require("./init/cmdline");
+const shortcuts = require("./init/shortcuts");
 
+// settings
 config.set("unlimitedFPS", true);
 config.set("timer", true);
 config.set("crosshair", true);
+config.set("bulletAlert", true);
 
 
 console.log(`cubeshotclient@${app.getVersion()} { Electron: ${process.versions.electron}, Node: ${process.versions.node}, Chromium: ${process.versions.chrome} }`);
@@ -50,3 +59,9 @@ function createWindow() {
 cmdline(app);
 
 app.on('ready', createWindow);
+
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
+})
