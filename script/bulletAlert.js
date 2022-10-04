@@ -16,7 +16,7 @@ let showTimerUi = function () {
         console.log(bulletLeft.innerText);
         if (bulletLeft.innerText < bulletTotal.innerText / 3) {
             bulletLeft.style.color = "red";
-            bulletLeft.style.fontSize = "9px"
+            bulletLeft.style.fontSize = "9vw"
         } else {
             bulletLeft.style.color = "white";
             bulletLeft.style.fontSize = "3vw";

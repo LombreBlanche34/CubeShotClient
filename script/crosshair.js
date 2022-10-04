@@ -26,12 +26,12 @@ let crosshair = function () {
     }
 
     const crosshairCss = `
-            #crosshair {
-            position:absolute;
-            display:block;
-            left:1042px;
-            top:578px;
-            }
+    #crosshair {
+        position:absolute;
+        display:block;
+        left:936px;
+        top:516px;
+        }     
         `;
 
     addGlobalStyle(crosshairCss);
