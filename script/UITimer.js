@@ -8,18 +8,12 @@ let showTimerUi = function () {
         return false;
     }
 
-    console.log("[SCRIPT] timer: " + true)
-
-    var timerUi;
-    var clickToSpec = document.getElementsByClassName('text svelte-8yebgp');
-
-    function applyTimerUi() {
-        
-        timerUi = document.getElementsByClassName("text svelte-sswfbw");
-        clickToSpec[1].innerText = timerUi[0].innerText;
-    }
-
-    setInterval(applyTimerUi, 1000);
+    let igTimer = document.querySelector("#app > app-interface > div:nth-child(2) > game-interface > game-time > span");
+    let clickToSpec = document.querySelector("#app > app-interface > div:nth-child(3) > menu-interface > menu-instructions > span");
+    
+    igTimer.addEventListener("DOMCharacterDataModified", function (event) {
+        clickToSpec.innerText = igTimer.innerText
+    });
 }
 
 module.exports = showTimerUi;
