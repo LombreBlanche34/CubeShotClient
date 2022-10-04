@@ -1,7 +1,7 @@
 const Store = require("electron-store");
 const config = new Store();
 
-let showTimerUi = function () {
+let bulletAlert = function () {
 
     if (!config.get("bulletAlert")) {
         console.log("[SCRIPT] bulletAlert: " + false)
@@ -24,4 +24,4 @@ let showTimerUi = function () {
     });
 }
 
-module.exports = showTimerUi;
+module.exports = bulletAlert;
