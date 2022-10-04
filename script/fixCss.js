@@ -14,7 +14,7 @@ let fixCss = function () {
     }
 
     const cssFix = `
-        .svelte-tqacjx {
+        .svelte-15uerad {
             margin-left: 10px
         }
     `;

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "discord-rich-presence": "^0.0.8",
     "electron": "^9.4.4",
     "electron-localshortcut": "^3.2.1",
     "electron-store": "^8.0.0",
