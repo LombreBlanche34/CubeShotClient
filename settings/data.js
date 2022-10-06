@@ -57,14 +57,14 @@ let loadSettings = function () {
             name: "Crosshair left (px)",
             id: "CrosshairLeft",
             type: "text",
-            value: config.get("CrosshairLeft") || "936",
+            value: config.get("CrosshairLeft"),
             needsRestart: "none"
         },
         CustomCrosshairTop: {
             name: "Crosshair top (px)",
             id: "CrosshairTop",
             type: "text",
-            value: config.get("CrosshairTop") || "512",
+            value: config.get("CrosshairTop"),
             needsRestart: "none"
         },
     }

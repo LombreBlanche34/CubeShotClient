@@ -46,7 +46,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
 console.log("[PRELOAD] SUCCESSFUL START");
 
 const custom_timer = require("../script/UITimer");
-const crosshair = require("../script/Crosshair");
+const crosshair = require("../script/crosshair");
 const fixCss = require("../script/fixCss");
 const settings = require("../settings/settings");
 const exitButton = require("../script/exitButton");

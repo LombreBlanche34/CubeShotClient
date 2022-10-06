@@ -7,11 +7,11 @@ let crosshair = function () {
         crosshairDOM.id = 'crosshair';
         crosshairDOM.src = config.get("CrosshairLink");
         crosshairDOM.style.position = 'absolute';
-        crosshairDOM.style.left = config.get("CrosshairLeft") + "px" || "936px"; 
-        crosshairDOM.style.top = config.get("CrosshairTop") + "px" || "516px";
+        crosshairDOM.style.left = config.get("CrosshairLeft") + "px"; 
+        crosshairDOM.style.top = config.get("CrosshairTop") + "px";
         document.body.appendChild(crosshairDOM);
 
-    if (!config.get("CustomCrosshair") && !config.get("CrosshairLink")) {
+    if (!config.get("CustomCrosshair")) {
         console.log("[SCRIPT] CustomCrosshair: " + false);
         crosshairDOM.style.display = 'none';
         return false;
