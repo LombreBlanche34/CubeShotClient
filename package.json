@@ -2,6 +2,7 @@
   "dependencies": {
     "discord-rich-presence": "^0.0.8",
     "electron": "^9.4.4",
+    "electron-builder": "^23.3.3",
     "electron-localshortcut": "^3.2.1",
     "electron-store": "^8.0.0",
     "path": "^0.12.7"
@@ -10,8 +11,27 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
+    "build-installer": "electron-builder",
     "test": "electron main.js",
     "start": "electron main.js"
+  },
+  "build": {
+    "appId": "cubeshotclient",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/favicon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "src/favicon.ico",
+      "uninstallerIcon": "src/favicon.ico",
+      "uninstallDisplayName": "cubeshotclient",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "author": "Lombre_Blanche34",
   "license": "ISC",
