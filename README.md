@@ -10,3 +10,6 @@ CubeShotClient by Lombre_Blanche34
 - Ressource swapper (Documents >CubeShotSwapper)
 - Auto update (soon)
 - CommandOrControl+L -> copy the actual game link
+
+ [Download](https://github.com/LombreBlanche34/CubeShotClient/releases)
+ [Discord](https://discord.gg/Wfj2XTxSqV)
