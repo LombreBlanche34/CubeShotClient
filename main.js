@@ -9,6 +9,7 @@ const {
 const Store = require("electron-store");
 const config = new Store();
 const path = require("path");
+
 const client = require('discord-rich-presence')('1024249505429868594');
 client.updatePresence({
     state: 'CubeshotClient',
@@ -21,13 +22,6 @@ client.updatePresence({
 const Swapper = require("./script/swapper");
 const cmdline = require("./init/cmdline");
 const shortcuts = require("./init/shortcuts");
-
-// settings
-// config.set("unlimitedFPS", true);
-// config.set("timer", true);
-// config.set("crosshair", true);
-// config.set("bulletAlert", true);
-
 
 console.log(`cubeshotclient@${app.getVersion()} { Electron: ${process.versions.electron}, Node: ${process.versions.node}, Chromium: ${process.versions.chrome} }`);
 
@@ -44,7 +38,7 @@ function createWindow() {
         }
     });
     win.loadURL("https://cubeshot.io");
-    win.webContents.openDevTools();
+    //win.webContents.openDevTools();
     shortcuts(win, clipboard);
 
     protocol.registerFileProtocol('file', (request, callback) => {

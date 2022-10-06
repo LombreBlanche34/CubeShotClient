@@ -13,9 +13,9 @@
     "test": "electron main.js",
     "start": "electron main.js"
   },
-  "author": "",
+  "author": "Lombre_Blanche34",
   "license": "ISC",
-  "description": "",
+  "description": "Electron Client for Cubeshot.io",
   "devDependencies": {
     "electron-packager": "^16.0.0"
   }
