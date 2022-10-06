@@ -2,9 +2,18 @@
 const path = require("path");
 const fs = require("fs");
 const {session} = require("electron");
+const Store = require("electron-store");
+const config = new Store();
 
 class Swapper {
+    
     constructor(app) {
+        if (!config.get("swapper")) {
+            console.log("[SCRIPT] Swapper: " + false)
+            return false;
+        }
+        console.log("[SCRIPT] Swapper: " + true)
+
         this.app = app;
         this.urls = [];
 

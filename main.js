@@ -4,6 +4,7 @@ const {
     BrowserWindow,
     clipboard,
     protocol,
+    ipcMain
 } = require('electron')
 const Store = require("electron-store");
 const config = new Store();
@@ -22,10 +23,10 @@ const cmdline = require("./init/cmdline");
 const shortcuts = require("./init/shortcuts");
 
 // settings
-config.set("unlimitedFPS", true);
-config.set("timer", true);
-config.set("crosshair", true);
-config.set("bulletAlert", true);
+// config.set("unlimitedFPS", true);
+// config.set("timer", true);
+// config.set("crosshair", true);
+// config.set("bulletAlert", true);
 
 
 console.log(`cubeshotclient@${app.getVersion()} { Electron: ${process.versions.electron}, Node: ${process.versions.node}, Chromium: ${process.versions.chrome} }`);
@@ -39,7 +40,7 @@ function createWindow() {
         autoHideMenuBar: true,
         webPreferences: {
             preload: path.join(__dirname, "/preload/global.js"),
-            contextIsolation: false
+            contextIsolation: true
         }
     });
     win.loadURL("https://cubeshot.io");
@@ -60,8 +61,12 @@ cmdline(app);
 
 app.on('ready', createWindow);
 
+ipcMain.on('settingsStore', (event, id, value) => {
+    config.set(id, value)
+});
+
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit();
     }
-})
+});

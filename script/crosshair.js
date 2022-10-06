@@ -3,39 +3,23 @@ const config = new Store();
 
 let crosshair = function () {
 
-    if (!config.get("crosshair")) {
-        console.log("[SCRIPT] crosshair: " + false);
+    var crosshairDOM = document.createElement('img');
+        crosshairDOM.id = 'crosshair';
+        crosshairDOM.src = config.get("CrosshairLink");
+        crosshairDOM.style.position = 'absolute';
+        crosshairDOM.style.left = config.get("CrosshairLeft") + "px" || "936px"; 
+        crosshairDOM.style.top = config.get("CrosshairTop") + "px" || "516px";
+        document.body.appendChild(crosshairDOM);
+
+    if (!config.get("CustomCrosshair") && !config.get("CrosshairLink")) {
+        console.log("[SCRIPT] CustomCrosshair: " + false);
+        crosshairDOM.style.display = 'none';
         return false;
     }
 
-    console.log("[SCRIPT] crosshair: " + true);
-    var newHTML = document.createElement('div');
-    newHTML.innerHTML = '<img id="crosshair" src="https://cdn.discordapp.com/attachments/972232216451113070/972232662813118544/Laxzycross.png" </img>';
-    document.body.appendChild(newHTML);
+    console.log("[SCRIPT] CustomCrosshair: " + true);
 
-    function addGlobalStyle(css) {
-        var head, style;
-        head = document.getElementsByTagName('head')[0];
-        if (!head) {
-            return;
-        }
-        style = document.createElement('style');
-        style.type = 'text/css';
-        style.innerHTML = css;
-        head.appendChild(style);
-    }
-
-    const crosshairCss = `
-    #crosshair {
-        position:absolute;
-        display:block;
-        left:936px;
-        top:516px;
-        }     
-        `;
-
-    addGlobalStyle(crosshairCss);
-
+    crosshairDOM.style.display = 'block';
 }
 
 module.exports = crosshair;
