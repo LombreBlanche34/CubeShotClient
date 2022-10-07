@@ -59,6 +59,10 @@ ipcMain.on('settingsStore', (event, id, value) => {
     config.set(id, value)
 });
 
+ipcMain.handle("get-version", () => (
+    app.getVersion()
+));
+
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit();

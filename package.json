@@ -1,13 +1,15 @@
 {
-  "dependencies": {
-    "discord-rich-presence": "^0.0.8",
-    "electron-localshortcut": "^3.2.1",
-    "electron-store": "^8.0.0",
-    "path": "^0.12.7"
-  },
   "name": "cubeshotclient",
   "version": "1.0.0",
   "main": "main.js",
+  "dependencies": {
+    "discord-rich-presence": "^0.0.8",
+    "electron-fetch": "^1.9.1",
+    "electron-localshortcut": "^3.2.1",
+    "electron-store": "^8.0.0",
+    "open": "^8.4.0",
+    "path": "^0.12.7"
+  },
   "scripts": {
     "build-installer": "electron-builder",
     "test": "electron main.js",
@@ -34,8 +36,8 @@
   "license": "ISC",
   "description": "Electron Client for Cubeshot.io",
   "devDependencies": {
-    "electron-packager": "^16.0.0",
     "electron": "^9.4.4",
-    "electron-builder": "^23.3.3"
+    "electron-builder": "^23.3.3",
+    "electron-packager": "^16.0.0"
   }
 }
