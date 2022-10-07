@@ -24,7 +24,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
                 } else {
                     document.getElementById("crosshair").style.left = value + "px";
                 }
-
                 break;
 
             case "CrosshairTop":
@@ -33,9 +32,15 @@ contextBridge.exposeInMainWorld('electronAPI', {
                 } else {
                     document.getElementById("crosshair").style.top = value + "px";
                 }
-
                 break;
 
+            case "fpsOnUI":
+                if (value) {
+                    document.getElementById("FPSUI").style.display = "block";
+                } else {
+                    document.getElementById("FPSUI").style.display = "none";
+                }
+                break;
             default:
                 break;
         }
@@ -52,6 +57,7 @@ const settings = require("../settings/settings");
 const exitButton = require("../script/exitButton");
 const bulletAlert = require("../script/bulletAlert");
 const update = require("./update");
+const fpsOnUI = require("../script/fpsOnUI");
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("[PRELOAD] SUCCESSFUL LOAD DOM");
@@ -62,5 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fixCss();
     exitButton();
     bulletAlert();
+    fpsOnUI();
     console.log("[PRELOAD] SUCCESSFUL LOAD ALL SCRIPTS");
 });

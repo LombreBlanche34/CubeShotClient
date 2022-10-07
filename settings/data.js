@@ -32,11 +32,11 @@ let loadSettings = function () {
             checked: getNullOrCheck("UITimer"),
             needsRestart: "inline"
         },
-        CustomCrosshair: {
-            name: "Custom Crosshair",
-            id: "CustomCrosshair",
+        fpsOnUI: {
+            name: "FPS on UI",
+            id: "fpsOnUI",
             type: "checkbox",
-            checked: getNullOrCheck("CustomCrosshair"),
+            checked: getNullOrCheck("fpsOnUI"),
             needsRestart: "none"
         },
         bulletAlert: {
@@ -45,6 +45,13 @@ let loadSettings = function () {
             type: "checkbox",
             checked: getNullOrCheck("bulletAlert"),
             needsRestart: "inline"
+        },
+        CustomCrosshair: {
+            name: "Custom Crosshair",
+            id: "CustomCrosshair",
+            type: "checkbox",
+            checked: getNullOrCheck("CustomCrosshair"),
+            needsRestart: "none"
         },
         CustomCrosshairLink: {
             name: "Crosshair Link (.png link)",
