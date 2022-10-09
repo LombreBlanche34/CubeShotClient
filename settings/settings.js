@@ -4,6 +4,7 @@ let settingsInit = function () {
     let buttonSettings = document.querySelector("#app > app-interface > div:nth-child(3) > menu-interface > menu-tools > menu-tool:nth-child(3)");
 
     buttonSettings.onclick = function () {
+        document.querySelector("body > modal-entry > modal-container > modal-content > span").style.display = 'none';
         data = loadSettings();
         let settingsTab = document.querySelector("body > modal-entry > modal-container > modal-content");
         for (let i = 0; i < Object.values(data).length; i++) {
@@ -15,7 +16,7 @@ let settingsInit = function () {
                         ${Object.values(data)[i].name}
                         <span style='color: #eb5656; display: ${Object.values(data)[i].needsRestart}' >*</span>
                     </span>
-                            <input type="checkbox" id="${Object.values(data)[i].id}" onclick='window.electronAPI.settingsStore("${Object.values(data)[i].id}", document.getElementById("${Object.values(data)[i].id}").checked)' ${Object.values(data)[i].checked}>
+                            <input type="checkbox" class="checkboxSettings" id="${Object.values(data)[i].id}" onclick='window.electronAPI.settingsStore("${Object.values(data)[i].id}", document.getElementById("${Object.values(data)[i].id}").checked)' ${Object.values(data)[i].checked}>
                         </option-root>
                     `)
                 break;
@@ -26,7 +27,7 @@ let settingsInit = function () {
                                 ${Object.values(data)[i].name}
                                 <span style='color: #eb5656; display: ${Object.values(data)[i].needsRestart}' >*</span>
                             </span>
-                            <input type="text" id="${Object.values(data)[i].id}" oninput='window.electronAPI.settingsStore("${Object.values(data)[i].id}", document.getElementById("${Object.values(data)[i].id}").value)' value='${Object.values(data)[i].value}'>
+                            <input type="text" class="textSettings" id="${Object.values(data)[i].id}" oninput='window.electronAPI.settingsStore("${Object.values(data)[i].id}", document.getElementById("${Object.values(data)[i].id}").value)' value='${Object.values(data)[i].value}'>
                         </option-root>
                     `)
                 break;

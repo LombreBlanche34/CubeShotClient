@@ -58,10 +58,12 @@ const exitButton = require("../script/exitButton");
 const bulletAlert = require("../script/bulletAlert");
 const update = require("./update");
 const fpsOnUI = require("../script/fpsOnUI");
+const css = require("../script/css");
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("[PRELOAD] SUCCESSFUL LOAD DOM");
     update(ipcRenderer);
+    css();
     settings();
     custom_timer();
     crosshair();
