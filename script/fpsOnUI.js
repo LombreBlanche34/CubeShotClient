@@ -11,11 +11,12 @@ let fpsOnUI = function () {
     if (!config.get("fpsOnUI")) {
         console.log("[SCRIPT] fpsOnUI: " + false)
         document.getElementById("FPSUI").style.display = "none";
+        
     } else {
+        console.log("[SCRIPT] fpsOnUI: " + true);
         document.getElementById("FPSUI").style.display = "block";
     }
 
-    console.log("[SCRIPT] fpsOnUI: " + true);
 
     FPS.addEventListener("DOMCharacterDataModified", function (event) {
         document.getElementById("FPSUI").innerText = FPS.innerText
