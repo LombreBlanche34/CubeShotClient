@@ -59,6 +59,7 @@ const bulletAlert = require("../script/bulletAlert");
 const update = require("./update");
 const fpsOnUI = require("../script/fpsOnUI");
 const css = require("../script/css");
+const totalPlayers = require("../script/totalPlayers");
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("[PRELOAD] SUCCESSFUL LOAD DOM");
@@ -71,5 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     exitButton();
     bulletAlert();
     fpsOnUI();
+    totalPlayers();
     console.log("[PRELOAD] SUCCESSFUL LOAD ALL SCRIPTS");
 });

@@ -46,6 +46,13 @@ let loadSettings = function () {
             checked: getNullOrCheck("bulletAlert"),
             needsRestart: "inline"
         },
+        totalPlayers: {
+            name: "total players on server tab",
+            id: "totalPlayers",
+            type: "checkbox",
+            checked: getNullOrCheck("totalPlayers"),
+            needsRestart: "none"
+        },
         CustomCrosshair: {
             name: "Custom Crosshair",
             id: "CustomCrosshair",
