@@ -57,6 +57,11 @@ let css = function () {
         border: 0px;
         padding: 0px 10px;
     }
+
+    .exportSettings {
+        width: 50%;
+        height: 50%;
+    }
     `;
 
     function addGlobalStyle(css) {

@@ -63,6 +63,10 @@ ipcMain.handle("get-version", () => (
     app.getVersion()
 ));
 
+ipcMain.handle("getSettings", () => (
+    win.webContents.executeJavaScript("localStorage.SettingsEvent")
+));
+
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit();

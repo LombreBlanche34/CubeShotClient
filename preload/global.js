@@ -61,19 +61,21 @@ const fpsOnUI = require("../script/fpsOnUI");
 const css = require("../script/css");
 const totalPlayers = require("../script/totalPlayers");
 const badges = require("../script/badges");
+const exportImportSettings = require("../script/exportImportSettings");
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("[PRELOAD] SUCCESSFUL LOAD DOM");
     update(ipcRenderer);
     css();
+    exitButton();
     settings();
     custom_timer();
     crosshair();
     fixCss();
-    exitButton();
     bulletAlert();
     fpsOnUI();
     totalPlayers();
     badges();
+    exportImportSettings(ipcRenderer);
     console.log("[PRELOAD] SUCCESSFUL LOAD ALL SCRIPTS");
 });

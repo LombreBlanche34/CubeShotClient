@@ -6,7 +6,9 @@
     "discord-rich-presence": "^0.0.8",
     "electron-fetch": "^1.9.1",
     "electron-localshortcut": "^3.2.1",
+    "electron-prompt": "^1.7.0",
     "electron-store": "^8.0.0",
+    "hastebin": "^0.2.1",
     "open": "^8.4.0",
     "path": "^0.12.7"
   },
