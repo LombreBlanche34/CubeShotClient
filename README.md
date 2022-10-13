@@ -6,7 +6,7 @@ CubeShotClient by Lombre_Blanche34
 [![Github All Releases](https://img.shields.io/github/downloads/LombreBlanche34/cubeshotclient/total.svg?style=for-the-badge)]()
 
 [Download](https://github.com/LombreBlanche34/CubeShotClient/releases)
- 
+
 # Features
 
 - Unlimited FPS
@@ -14,8 +14,8 @@ CubeShotClient by Lombre_Blanche34
 - Timer on "click to play" UI
 - FPS on "click to play" UI
 - Ressource swapper (Documents >CubeShotSwapper)
+- export and import settings (settings tab)
+- total players count (server tab)
 - update indicator
 - Auto update (soon)
 - CommandOrControl+L -> copy the actual game link
-
-
