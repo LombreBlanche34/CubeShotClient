@@ -4,7 +4,7 @@ const client = new rpc.Client({
 });
 var RPCDATA = {
     "ClientID": "1030421760924991488",
-    "LargeImage": "favicon", 
+    "LargeImage": "favicon",
     "LargeImageText": "CubeShotClient",
     "SmallImage": "pp",
     "SmallImageText": "Lombre_Blanche34",
@@ -12,23 +12,42 @@ var RPCDATA = {
     "Url1": "https://github.com/LombreBlanche34/CubeShotClient",
     "Button2": "Discord",
     "Url2": "https://discord.gg/Wfj2XTxSqV",
-    "State": "",
-    "Details": ""
+    "State": "version",
+    "Details": "username"
 }
 
 let rpcDiscord = (ipcRenderer) => {
-    ipcRenderer
-    .invoke("get-version")
-    .then(version => {
-        RPCDATA.State = "version: " + version;
-    })
+    // setTimeout(() => {
+    //     ipcRenderer
+    //     .invoke("get-version")
+    //     .then(version => {
+    //         RPCDATA.State = "version: " + version;
+    //     })
+
+    //     ipcRenderer
+    //     .invoke("get-username")
+    //     .then(username => {
+    //         RPCDATA.Details = "username: " + username;
+    //         if (!username) {
+    //             RPCDATA.Details = "username: Guest";
+    //         }
+    //     })
+    // }, 1000)
 
     ipcRenderer
-    .invoke("get-username")
-    .then(username => {
-        RPCDATA.Details = "username: " + username;
-    })
+        .invoke("get-version")
+        .then(version => {
+            RPCDATA.State = "version: " + version;
+        })
 
+    ipcRenderer
+        .invoke("get-username")
+        .then(username => {
+            RPCDATA.Details = "username: " + username;
+            if (!username) {
+                RPCDATA.Details = "username: Guest";
+            }
+        })
     client.login({
         clientId: RPCDATA.ClientID
     })
@@ -61,7 +80,7 @@ let rpcDiscord = (ipcRenderer) => {
                 ]
             }
         })
-    }, 1000)
+    }, 2000)
 
 }
 

@@ -67,6 +67,8 @@ const rpcDiscord = require("../script/rpcDiscord");
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("[PRELOAD] SUCCESSFUL LOAD DOM");
+    console.log("[SCRIPT] rpcDiscord")
+    rpcDiscord(ipcRenderer);
     console.log("[SCRIPT] update")
     update(ipcRenderer)
     console.log("[SCRIPT] css")
@@ -89,7 +91,5 @@ document.addEventListener("DOMContentLoaded", () => {
     //badges();
     console.log("[SCRIPT] exportImportSettings")
     exportImportSettings(ipcRenderer);
-    console.log("[SCRIPT] rpcDiscord")
-    rpcDiscord(ipcRenderer);
     console.log("[PRELOAD] SUCCESSFUL LOAD ALL SCRIPTS");
 });
