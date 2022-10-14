@@ -11,11 +11,12 @@ CubeShotClient by Lombre_Blanche34
 
 - Unlimited FPS
 - Custom crosshair link / custom left and top px
+- Discord RPC
 - Timer on "click to play" UI
 - FPS on "click to play" UI
 - Ressource swapper (Documents >CubeShotSwapper)
-- export and import settings (settings tab)
-- total players count (server tab)
-- update indicator
+- Export and import settings (settings tab)
+- Total players count (server tab)
+- Update indicator
 - Auto update (soon)
 - CommandOrControl+L -> copy the actual game link
