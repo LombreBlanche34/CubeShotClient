@@ -10,14 +10,6 @@ const Store = require("electron-store");
 const config = new Store();
 const path = require("path");
 
-const client = require('discord-rich-presence')('1024249505429868594');
-client.updatePresence({
-    state: 'CubeshotClient',
-    startTimestamp: Date.now(),
-    largeImageKey: 'favicon',
-    instance: true,
-});
-
 // swapper from krunker FrenchChadsClient (ty azerptiop)
 const Swapper = require("./script/swapper");
 const cmdline = require("./init/cmdline");
@@ -65,6 +57,11 @@ ipcMain.handle("get-version", () => (
 
 ipcMain.handle("getSettings", () => (
     win.webContents.executeJavaScript("localStorage.SettingsEvent")
+));
+
+ipcMain.handle("get-username", () => (
+    win.webContents.executeJavaScript("JSON.parse(localStorage.PlayerEvent).username")
+    
 ));
 
 app.on('window-all-closed', () => {

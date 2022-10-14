@@ -63,6 +63,7 @@ const css = require("../script/css");
 const totalPlayers = require("../script/totalPlayers");
 // const badges = require("../script/badges");
 const exportImportSettings = require("../script/exportImportSettings");
+const rpcDiscord = require("../script/rpcDiscord");
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("[PRELOAD] SUCCESSFUL LOAD DOM");
@@ -88,5 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //badges();
     console.log("[SCRIPT] exportImportSettings")
     exportImportSettings(ipcRenderer);
+    console.log("[SCRIPT] rpcDiscord")
+    rpcDiscord(ipcRenderer);
     console.log("[PRELOAD] SUCCESSFUL LOAD ALL SCRIPTS");
 });
