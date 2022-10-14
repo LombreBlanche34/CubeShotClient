@@ -12,12 +12,9 @@ let crosshair = function () {
         document.body.appendChild(crosshairDOM);
 
     if (!config.get("CustomCrosshair")) {
-        console.log("[SCRIPT] CustomCrosshair: " + false);
         crosshairDOM.style.display = 'none';
         return false;
     }
-
-    console.log("[SCRIPT] CustomCrosshair: " + true);
 
     crosshairDOM.style.display = 'block';
 }

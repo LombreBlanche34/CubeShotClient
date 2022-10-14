@@ -9,11 +9,9 @@ let fpsOnUI = function () {
     `)
 
     if (!config.get("fpsOnUI")) {
-        console.log("[SCRIPT] fpsOnUI: " + false)
         document.getElementById("FPSUI").style.display = "none";
         
     } else {
-        console.log("[SCRIPT] fpsOnUI: " + true);
         document.getElementById("FPSUI").style.display = "block";
     }
 

@@ -1,5 +1,3 @@
-console.log("[SCRIPT] fix: forced: " + true);
-
 let fixCss = function () {
     function addGlobalStyle(css) {
         var head, style;

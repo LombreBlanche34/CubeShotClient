@@ -10,11 +10,13 @@ let exportImportSettings = (ipcRenderer) => {
     let buttonSettings = document.querySelector("#app > app-interface > div:nth-child(3) > menu-interface > menu-tools > menu-tool:nth-child(4)")
     
     buttonSettings.onclick = function () {
+        console.log("[LOG] buttonSettings clicked")
         let btnImport = document.createElement("input");
         btnImport.id = "exportSettings"
         btnImport.type = "button";
         btnImport.value = "EXPORT";
         btnImport.onclick = function () {
+            console.log("[LOG] btnImport clicked")
             ipcRenderer
                 .invoke("getSettings")
                 .then(info => {
@@ -25,6 +27,7 @@ let exportImportSettings = (ipcRenderer) => {
                         }, {})
                         .then((urlToPaste) => {
                             alert("copied to clipboard")
+                            console.log(urlToPaste);
                             clipboard.writeText(urlToPaste)
                         })
                 })
@@ -35,6 +38,7 @@ let exportImportSettings = (ipcRenderer) => {
         btnExport.type = "button";
         btnExport.value = "IMPORT";
         btnExport.onclick = function () {
+            console.log("[LOG] btnExport clicked")
             prompt({
                     title: 'Settings Import',
                     label: 'settings:',

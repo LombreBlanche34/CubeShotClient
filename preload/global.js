@@ -44,6 +44,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
             default:
                 break;
         }
+        console.log("[SWITCH] " + id + " " + value)
         ipcRenderer.send('settingsStore', id, value)
     }
 })
@@ -55,27 +56,37 @@ const crosshair = require("../script/crosshair");
 const fixCss = require("../script/fixCss");
 const settings = require("../settings/settings");
 const exitButton = require("../script/exitButton");
-const bulletAlert = require("../script/bulletAlert");
+// const bulletAlert = require("../script/bulletAlert");
 const update = require("./update");
 const fpsOnUI = require("../script/fpsOnUI");
 const css = require("../script/css");
 const totalPlayers = require("../script/totalPlayers");
-const badges = require("../script/badges");
+// const badges = require("../script/badges");
 const exportImportSettings = require("../script/exportImportSettings");
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("[PRELOAD] SUCCESSFUL LOAD DOM");
-    update(ipcRenderer);
+    console.log("[SCRIPT] update")
+    update(ipcRenderer)
+    console.log("[SCRIPT] css")
     css();
+    console.log("[SCRIPT] exitButton")
     exitButton();
+    console.log("[SCRIPT] settings")
     settings();
+    console.log("[SCRIPT] custom_timer")
     custom_timer();
+    console.log("[SCRIPT] crosshair")
     crosshair();
+    console.log("[SCRIPT] fixCss")
     fixCss();
-    bulletAlert();
+    // bulletAlert();
+    console.log("[SCRIPT] fpsOnUI")
     fpsOnUI();
+    console.log("[SCRIPT] totalPlayers")
     totalPlayers();
-    badges();
+    //badges();
+    console.log("[SCRIPT] exportImportSettings")
     exportImportSettings(ipcRenderer);
     console.log("[PRELOAD] SUCCESSFUL LOAD ALL SCRIPTS");
 });

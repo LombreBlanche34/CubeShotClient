@@ -9,27 +9,25 @@ class Swapper {
     
     constructor(app) {
         if (!config.get("swapper")) {
-            console.log("[SCRIPT] Swapper: " + false)
             return false;
         }
-        console.log("[SCRIPT] Swapper: " + true)
 
         this.app = app;
         this.urls = [];
 
         this.swapFolder = this.getSwapFolder();
 
-        console.log("Resource swapper initialized");
+        console.log("[SWAPPER] Resource swapper initialized");
         let files = this.searchFiles(this.swapFolder);
         this.applyRedirect(files);
-        console.log("Resource swapper loaded");
+        console.log("[SWAPPER] Resource swapper loaded");
     }
 
     getSwapFolder() {
         let swapFolder = path.join(this.app.getPath("documents"), "/cubeshotswapper");
         if(!fs.existsSync(swapFolder)) {
             fs.mkdirSync(swapFolder);
-            console.log(`Swapper folder created at ${swapFolder}`);
+            console.log(`[SWAPPER] Swapper folder created at ${swapFolder}`);
         }
         return swapFolder;
     }

@@ -6,7 +6,6 @@ let settingsInit = function () {
 
     buttonSettings.onclick = function () {
         setTimeout(() => {
-            console.log("a")
             // cookie text
             document.querySelector("body > modal-entry > modal-container > modal-content > span").style.display = 'none';
             data = loadSettings();
@@ -39,6 +38,7 @@ let settingsInit = function () {
                     default:
                         break;
                 }
+                console.log("[SETTINGS] " + Object.values(data)[i].id)
             }
         }, 500)
     }

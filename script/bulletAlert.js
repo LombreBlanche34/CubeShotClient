@@ -4,10 +4,8 @@ const config = new Store();
 let bulletAlert = function () {
 
     if (!config.get("bulletAlert")) {
-        console.log("[SCRIPT] bulletAlert: " + false)
         return false;
     }
-    console.log("[SCRIPT] bulletAlert: " + true)
 
     let bulletLeft = document.querySelector("#app > app-interface > div:nth-child(2) > game-interface > player-ammo > span.mag.svelte-1quzmtf");
     let bulletTotal = document.querySelector("#app > app-interface > div:nth-child(2) > game-interface > player-ammo > span.clip.svelte-1quzmtf")

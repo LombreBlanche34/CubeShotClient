@@ -1,6 +1,5 @@
 let badges = () => {
     let gamemod = "Free for All"
-    console.log(gamemod);
     let players = [];
 
     fetch("https://raw.githubusercontent.com/LombreBlanche34/CubeShotClient/main/src/badges.json")

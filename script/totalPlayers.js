@@ -53,6 +53,7 @@ let totalPlayers = function () {
                 document.querySelector("body > modal-entry > modal-container > modal-content > mode-entries > span:nth-child(1) > div").style.display = "none";
                 document.querySelector("body > modal-entry > modal-container > modal-content > mode-entries > span:nth-child(2) > div").style.display = "none";
                 document.querySelector("body > modal-entry > modal-container > modal-content > mode-entries > span:nth-child(3) > div").style.display = "none";
+                return false;
             }
             setInterval(() => {
                 request()
