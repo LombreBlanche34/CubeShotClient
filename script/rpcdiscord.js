@@ -17,23 +17,6 @@ var RPCDATA = {
 }
 
 let rpcDiscord = (ipcRenderer) => {
-    // setTimeout(() => {
-    //     ipcRenderer
-    //     .invoke("get-version")
-    //     .then(version => {
-    //         RPCDATA.State = "version: " + version;
-    //     })
-
-    //     ipcRenderer
-    //     .invoke("get-username")
-    //     .then(username => {
-    //         RPCDATA.Details = "username: " + username;
-    //         if (!username) {
-    //             RPCDATA.Details = "username: Guest";
-    //         }
-    //     })
-    // }, 1000)
-
     ipcRenderer
         .invoke("get-version")
         .then(version => {
