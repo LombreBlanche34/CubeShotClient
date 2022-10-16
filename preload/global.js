@@ -41,6 +41,15 @@ contextBridge.exposeInMainWorld('electronAPI', {
                     document.getElementById("FPSUI").style.display = "none";
                 }
                 break;
+
+            case "UITimer": 
+                if (value) {
+                    document.getElementById("timerCustom").style.display = "block";
+                } else {
+                    document.getElementById("timerCustom").style.display = "none";
+                }
+            break;
+
             default:
                 break;
         }

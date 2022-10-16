@@ -30,7 +30,7 @@ let loadSettings = function () {
             id: "UITimer",
             type: "checkbox",
             checked: getNullOrCheck("UITimer"),
-            needsRestart: "inline"
+            needsRestart: "none"
         },
         fpsOnUI: {
             name: "FPS on UI",
