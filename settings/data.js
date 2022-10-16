@@ -39,13 +39,6 @@ let loadSettings = function () {
             checked: getNullOrCheck("fpsOnUI"),
             needsRestart: "none"
         },
-        bulletAlert: {
-            name: "bullet alert",
-            id: "bulletAlert",
-            type: "checkbox",
-            checked: getNullOrCheck("bulletAlert"),
-            needsRestart: "inline"
-        },
         totalPlayers: {
             name: "total players on server tab",
             id: "totalPlayers",
