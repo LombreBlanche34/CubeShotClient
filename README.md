@@ -7,7 +7,7 @@ CubeShotClient by Lombre_Blanche34
 
 [Download](https://github.com/LombreBlanche34/CubeShotClient/releases)
 
-# Features
+<h1> features ingame
 
 - Unlimited FPS
 - Custom crosshair link / custom left and top px
@@ -20,3 +20,10 @@ CubeShotClient by Lombre_Blanche34
 - Update indicator
 - Auto update (soon)
 - CommandOrControl+L -> copy the actual game link
+
+
+<h1> features Twitch
+
+- Link command
+- Settings command
+- crosshair command
