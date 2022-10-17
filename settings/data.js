@@ -99,7 +99,7 @@ let loadSettings = function () {
             type: "text",
             realType: "text",
             placeholder: "Lombre_Blanche34",
-            value: config.get("ttv_channels"),
+            value: config.get("ttv_channels") || "",
             needsRestart: "inline"
         },
         ttv_cmd_link: {
