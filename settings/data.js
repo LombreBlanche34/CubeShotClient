@@ -83,7 +83,7 @@ let loadSettings = function () {
             type: "text",
             realType: "password",
             placeholder: "oauth:...",
-            value: config.get("ttv_oath"),
+            value: config.get("ttv_oath") || "",
             needsRestart: "inline"
         },
         ttv_help_token: {
