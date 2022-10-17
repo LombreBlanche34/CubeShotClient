@@ -61,7 +61,10 @@ ipcMain.handle("getSettings", () => (
 
 ipcMain.handle("get-username", () => (
     win.webContents.executeJavaScript("JSON.parse(localStorage.PlayerEvent).username")
-    
+));
+
+ipcMain.handle("get-link", () => (
+    win.webContents.getURL()
 ));
 
 app.on('window-all-closed', () => {

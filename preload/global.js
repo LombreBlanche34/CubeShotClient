@@ -73,6 +73,7 @@ const totalPlayers = require("../script/totalPlayers");
 // const badges = require("../script/badges");
 const exportImportSettings = require("../script/exportImportSettings");
 const rpcDiscord = require("../script/rpcdiscord");
+const twitch = require("../script/twitch");
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("[PRELOAD] SUCCESSFUL LOAD DOM");
@@ -100,5 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //badges();
     console.log("[SCRIPT] exportImportSettings")
     exportImportSettings(ipcRenderer);
+    console.log("[SCRIPT] Twitch")
+    twitch(ipcRenderer);
     console.log("[PRELOAD] SUCCESSFUL LOAD ALL SCRIPTS");
 });

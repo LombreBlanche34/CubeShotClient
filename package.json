@@ -10,7 +10,8 @@
     "electron-store": "^8.0.0",
     "hastebin": "^0.2.1",
     "open": "^8.4.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "tmi.js": "^1.8.5"
   },
   "scripts": {
     "build-installer": "electron-builder",
