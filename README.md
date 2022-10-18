@@ -11,6 +11,7 @@ CubeShotClient by Lombre_Blanche34
 
 - Unlimited FPS
 - Custom crosshair link / custom left and top px
+- Custom CSS
 - Discord RPC
 - Timer on "click to play" UI
 - FPS on "click to play" UI
