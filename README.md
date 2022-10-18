@@ -15,7 +15,7 @@ CubeShotClient by Lombre_Blanche34
 - Discord RPC
 - Timer on "click to play" UI
 - FPS on "click to play" UI
-- Ressource swapper (Documents >CubeShotSwapper)
+- Ressource swapper (Documents/CubeShotSwapper)
 - Export and import settings (settings tab)
 - Total players count (server tab)
 - Update indicator
