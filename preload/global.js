@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("[SCRIPT] rpcDiscord")
     rpcDiscord(ipcRenderer);
     console.log("[SCRIPT] update")
-    //update(ipcRenderer)
+    update(ipcRenderer)
     console.log("[SCRIPT] css")
     css();
     console.log("[SCRIPT] exitButton")
