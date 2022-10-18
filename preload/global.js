@@ -74,13 +74,14 @@ const totalPlayers = require("../script/totalPlayers");
 const exportImportSettings = require("../script/exportImportSettings");
 const rpcDiscord = require("../script/rpcdiscord");
 const twitch = require("../script/twitch");
+const CustomCssLink = require("../script/customCss")
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("[PRELOAD] SUCCESSFUL LOAD DOM");
     console.log("[SCRIPT] rpcDiscord")
     rpcDiscord(ipcRenderer);
     console.log("[SCRIPT] update")
-    update(ipcRenderer)
+    //update(ipcRenderer)
     console.log("[SCRIPT] css")
     css();
     console.log("[SCRIPT] exitButton")
@@ -103,5 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     exportImportSettings(ipcRenderer);
     console.log("[SCRIPT] Twitch")
     twitch(ipcRenderer);
+    console.log("[SCRIPT] CustomCssLink")
+    CustomCssLink();
     console.log("[PRELOAD] SUCCESSFUL LOAD ALL SCRIPTS");
 });

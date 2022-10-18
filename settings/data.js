@@ -51,6 +51,24 @@ let loadSettings = function () {
             checked: getNullOrCheck("totalPlayers"),
             needsRestart: "none"
         },
+        CustomCss: {
+            name: "Custom css",
+            cat: "subSetIg",
+            id: "CustomCss",
+            type: "checkbox",
+            checked: getNullOrCheck("totalPlayers"),
+            needsRestart: "inline"
+        },
+        CustomCssLink: {
+            name: "Custom css link",
+            cat: "subSetIg",
+            id: "CustomCssLink",
+            type: "text",
+            realType: "text",
+            placeholder: "",
+            value: config.get("CustomCssLink") || "",
+            needsRestart: "inline"
+        },
         CustomCrosshair: {
             name: "Custom Crosshair",
             cat: "subSetCross",
@@ -64,6 +82,7 @@ let loadSettings = function () {
             cat: "subSetCross",
             id: "CrosshairLink",
             type: "text",
+            placeholder: "",
             realType: "text",
             value: config.get("CrosshairLink") || "",
             needsRestart: "none"
@@ -73,6 +92,7 @@ let loadSettings = function () {
             cat: "subSetCross",
             id: "CrosshairLeft",
             type: "text",
+            placeholder: "",
             realType: "text",
             value: config.get("CrosshairLeft"),
             needsRestart: "none"
@@ -82,6 +102,7 @@ let loadSettings = function () {
             cat: "subSetCross",
             id: "CrosshairTop",
             type: "text",
+            placeholder: "",
             realType: "text",
             value: config.get("CrosshairTop"),
             needsRestart: "none"
@@ -92,7 +113,7 @@ let loadSettings = function () {
             id: "ttv_oath",
             type: "text",
             realType: "password",
-            placeholder: "oauth:...",
+            placeholder: "",
             value: config.get("ttv_oath") || "",
             needsRestart: "inline"
         },

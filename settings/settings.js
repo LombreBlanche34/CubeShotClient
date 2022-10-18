@@ -8,9 +8,13 @@ let settingsInit = function () {
 
     buttonSettings.onclick = function () {
         setTimeout(() => {
+            
             document.querySelector("body > modal-entry > modal-container > modal-content > span").style.display = 'none';
+            
             data = loadSettings();
+            
             let settingsTab = document.querySelector("body > modal-entry > modal-container > modal-content");
+
             settingsTab.insertAdjacentHTML("beforeend", `
                 <group-entry id="IngameClientSettings" data-border="true" data-lock="false" data-open="false" class="svelte-1m0j93a">
                     <div class="title svelte-1m0j93a">
