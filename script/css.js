@@ -62,6 +62,10 @@ let css = function () {
         width: 50%;
         height: 50%;
     }
+
+    #subSetIg, #subSetTtv, #subSetCross {
+        display: none;
+    }
     `;
 
     function addGlobalStyle(css) {
