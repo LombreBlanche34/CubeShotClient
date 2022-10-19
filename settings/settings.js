@@ -8,11 +8,11 @@ let settingsInit = function () {
 
     buttonSettings.onclick = function () {
         setTimeout(() => {
-            
+
             document.querySelector("body > modal-entry > modal-container > modal-content > span").style.display = 'none';
-            
+
             data = loadSettings();
-            
+
             let settingsTab = document.querySelector("body > modal-entry > modal-container > modal-content");
 
             settingsTab.insertAdjacentHTML("beforeend", `
@@ -92,27 +92,18 @@ let settingsInit = function () {
                 console.log("[SETTINGS] " + Object.values(data)[i].id)
             }
 
-            document.querySelector("#IngameClientSettings > div.title.svelte-1m0j93a").onclick = () => {
-                if (document.getElementById("subSetIg").style.display === "inline") {
-                    document.getElementById("subSetIg").style.display = "none";
-                } else {
-                    document.getElementById("subSetIg").style.display = "inline";
-                }
-            }
 
-            document.querySelector("#CrossClientSettings > div.title.svelte-1m0j93a").onclick = () => {
-                if (document.getElementById("subSetCross").style.display === "inline") {
-                    document.getElementById("subSetCross").style.display = "none";
-                } else {
-                    document.getElementById("subSetCross").style.display = "inline";
-                }
-            }
+            toggleSettings("#IngameClientSettings > div.title.svelte-1m0j93a", "subSetIg")
+            toggleSettings("#CrossClientSettings > div.title.svelte-1m0j93a", "subSetCross")
+            toggleSettings("#TtvClientSettings > div.title.svelte-1m0j93a", "subSetTtv")
 
-            document.querySelector("#TtvClientSettings > div.title.svelte-1m0j93a").onclick = () => {
-                if (document.getElementById("subSetTtv").style.display === "inline") {
-                    document.getElementById("subSetTtv").style.display = "none";
-                } else {
-                    document.getElementById("subSetTtv").style.display = "inline";
+            function toggleSettings(target, id) {
+                document.querySelector(target).onclick = () => {
+                    if (document.getElementById(id).style.display === "inline") {
+                        document.getElementById(id).style.display = "none";
+                    } else {
+                        document.getElementById(id).style.display = "inline";
+                    }
                 }
             }
 
