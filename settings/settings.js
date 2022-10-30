@@ -16,9 +16,9 @@ let settingsInit = function () {
             let settingsTab = document.querySelector("body > modal-entry > modal-container > modal-content");
 
             settingsTab.insertAdjacentHTML("beforeend", `
-                <group-entry id="IngameClientSettings" data-border="true" data-lock="false" data-open="false" class="svelte-1m0j93a">
-                    <div class="title svelte-1m0j93a">
-                        <span class="text svelte-1m0j93a">
+                <group-entry id="IngameClientSettings" data-border="true" data-lock="false" data-open="false" class="svelte-82fu96">
+                    <div class="title svelte-82fu96">
+                        <span class="text svelte-82fu96">
                             Ingame Settings
                         </span> 
                     </div>
@@ -27,9 +27,9 @@ let settingsInit = function () {
             `)
 
             settingsTab.insertAdjacentHTML("beforeend", `
-                <group-entry id="CrossClientSettings" data-border="true" data-lock="false" data-open="false" class="svelte-1m0j93a">
-                    <div class="title svelte-1m0j93a">
-                        <span class="text svelte-1m0j93a">
+                <group-entry id="CrossClientSettings" data-border="true" data-lock="false" data-open="false" class="svelte-82fu96">
+                    <div class="title svelte-82fu96">
+                        <span class="text svelte-82fu96">
                             Crosshair Settings
                         </span> 
                     </div>
@@ -38,9 +38,9 @@ let settingsInit = function () {
             `)
 
             settingsTab.insertAdjacentHTML("beforeend", `
-                <group-entry id="TtvClientSettings" data-border="true" data-lock="false" data-open="false" class="svelte-1m0j93a">
-                    <div class="title svelte-1m0j93a">
-                        <span class="text svelte-1m0j93a">
+                <group-entry id="TtvClientSettings" data-border="true" data-lock="false" data-open="false" class="svelte-82fu96">
+                    <div class="title svelte-82fu96">
+                        <span class="text svelte-82fu96">
                             Twitch Settings
                         </span> 
                     </div>
@@ -92,10 +92,9 @@ let settingsInit = function () {
                 console.log("[SETTINGS] " + Object.values(data)[i].id)
             }
 
-
-            toggleSettings("#IngameClientSettings > div.title.svelte-1m0j93a", "subSetIg")
-            toggleSettings("#CrossClientSettings > div.title.svelte-1m0j93a", "subSetCross")
-            toggleSettings("#TtvClientSettings > div.title.svelte-1m0j93a", "subSetTtv")
+            toggleSettings("#IngameClientSettings > div.title.svelte-82fu96", "subSetIg")
+            toggleSettings("#CrossClientSettings > div.title.svelte-82fu96", "subSetCross")
+            toggleSettings("#TtvClientSettings > div.title.svelte-82fu96", "subSetTtv")
 
             function toggleSettings(target, id) {
                 document.querySelector(target).onclick = () => {
