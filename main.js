@@ -1,4 +1,5 @@
 "use strict";
+require('v8-compile-cache');
 const {
     app,
     BrowserWindow,
